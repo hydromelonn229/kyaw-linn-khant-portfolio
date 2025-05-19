@@ -32,6 +32,19 @@ function ProjectsSection() {
             </div>
           </Link>
         </div>
+        <div className="group">
+          <Link to="/projects/search-rescue-operation" className="block p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-lg border-2 border-gray-200 hover:border-blue-300">
+            <div className="flex justify-between items-center">
+              <div>
+                <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">Search and Rescue Operation</h3>
+                <p className="text-gray-600 mt-2 group-hover:text-gray-700">Developed a coordinated system using quadcopter and ground robot for flood recovery missions.</p>
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300">
+                <span className="text-blue-500 font-medium">View Details →</span>
+              </div>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   );
