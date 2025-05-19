@@ -106,27 +106,55 @@ function AutonomousVehicle() {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Arduino Mega</span>
+                  <span className="text-gray-700">STM32 Nucleo-F411RE</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Ultrasonic Sensors</span>
+                  <span className="text-gray-700">L298N Motor Driver</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">DC Motors</span>
+                  <span className="text-gray-700">12v li-ion rechargeable battery</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Motor Driver</span>
+                  <span className="text-gray-700">3x HC-SR04 ultrasonic sensors</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Battery Pack</span>
+                  <span className="text-gray-700">3x Sharp GP2Y0A21YK IR distance sensors</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Chassis</span>
+                  <span className="text-gray-700">2x TT motors</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">Castor wheel</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">4x SG90 Servos</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">BLE4.0 HM-10</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">Push Button</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">Resistors</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">Jumper Wires</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">Breadboard</span>
                 </li>
               </ul>
             </div>

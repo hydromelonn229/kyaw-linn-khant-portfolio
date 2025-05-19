@@ -104,39 +104,6 @@ function AlphaMini() {
             </div>
           </section>
 
-          {/* Components List */}
-          <section id="components" className="mb-12 scroll-mt-20">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Components</h2>
-            <div className="bg-blue-50 rounded-lg p-6">
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Arduino Mega 2560</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Voice Recognition Module</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Stepper Motors</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">End-effector Assembly</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Power Supply Unit</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Control Interface</span>
-                </li>
-              </ul>
-            </div>
-          </section>
-
           {/* CAD Models */}
           <section id="cad" className="mb-12 scroll-mt-20">
             <h2 className="text-2xl font-bold text-blue-900 mb-4">CAD Models</h2>

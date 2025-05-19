@@ -116,27 +116,27 @@ function SelfBalancingRobot() {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Raspberry Pi 4</span>
+                  <span className="text-gray-700">Raspberry Pi 5</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">MPU6050 Gyroscope</span>
+                  <span className="text-gray-700">520 geared 12v DC motors (1:30) (333rpm)</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">DC Motors</span>
+                  <span className="text-gray-700">AT8236 2-Channel Motor Driver</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Motor Driver</span>
+                  <span className="text-gray-700">Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Battery Pack</span>
+                  <span className="text-gray-700">Geekworm X1201 2-Cell 18650 5.1V 5A UPS Shield for Raspberry Pi 5 Series</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Chassis</span>
+                  <span className="text-gray-700">12v li-ion rechargeable battery</span>
                 </li>
               </ul>
             </div>
