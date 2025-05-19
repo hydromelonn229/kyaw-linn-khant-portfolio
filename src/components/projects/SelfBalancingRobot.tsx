@@ -10,6 +10,7 @@ function SelfBalancingRobot() {
       <aside className="w-64 fixed left-0 top-0 h-screen bg-white border-r border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-blue-900 mb-4">Navigation</h3>
         <nav className="space-y-2">
+          <a href="#header" className="block text-gray-600 hover:text-blue-700 transition-colors">AI-Powered Self-Balancing Robot</a>
           <a href="#overview" className="block text-gray-600 hover:text-blue-700 transition-colors">Project Overview</a>
           <a href="#components" className="block text-gray-600 hover:text-blue-700 transition-colors">Components</a>
           <a href="#cad-model" className="block text-gray-600 hover:text-blue-700 transition-colors">CAD Model</a>
@@ -21,7 +22,7 @@ function SelfBalancingRobot() {
       <main className="flex-1 ml-64">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header Section */}
-          <div className="mb-12">
+          <div id="header" className="mb-12 scroll-mt-20">
             <h1 className="text-4xl font-bold text-blue-900 mb-4">AI-Powered Self-Balancing Robot</h1>
             <div className="flex items-center text-blue-700 mb-6">
               <span className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium">Ongoing</span>
