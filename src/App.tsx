@@ -8,6 +8,7 @@ import CoCurricularSection from './components/CoCurricularSection.tsx';
 import SoftSkillsSection from './components/SoftSkillsSection.tsx';
 import SkillsSection from './components/SkillsSection.tsx';
 import SelfBalancingRobot from './components/projects/SelfBalancingRobot.tsx';
+import AutonomousVehicle from './components/projects/AutonomousVehicle.tsx';
 
 function Navigation() {
   const location = useLocation();
@@ -62,6 +63,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/projects/self-balancing-robot" element={<SelfBalancingRobot />} />
+          <Route path="/projects/autonomous-vehicle" element={<AutonomousVehicle />} />
           <Route path="/" element={
             <main className="container mx-auto px-4 py-8">
               <section id="hero" className="mb-16"><HeroSection /></section>

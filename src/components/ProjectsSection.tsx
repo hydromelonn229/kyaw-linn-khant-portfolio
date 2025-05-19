@@ -20,7 +20,7 @@ function ProjectsSection() {
           </Link>
         </div>
         <div className="group">
-          <div className="p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-lg border-2 border-gray-200 hover:border-blue-300">
+          <Link to="/projects/autonomous-vehicle" className="block p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-lg border-2 border-gray-200 hover:border-blue-300">
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">Autonomous Microcontroller Vehicle</h3>
@@ -30,7 +30,7 @@ function ProjectsSection() {
                 <span className="text-blue-500 font-medium">View Details →</span>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
