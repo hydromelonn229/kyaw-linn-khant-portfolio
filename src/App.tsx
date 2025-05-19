@@ -13,6 +13,8 @@ import SearchRescueOperation from './components/projects/SearchRescueOperation.t
 import DobotMagician from './components/projects/DobotMagician.tsx';
 import AlphaMini from './components/projects/AlphaMini.tsx';
 import WirelessZigbee from './components/projects/WirelessZigbee.tsx';
+import SensorSignalProcessing from './components/projects/SensorSignalProcessing.tsx';
+import ShibuyaTrafficLight from './components/projects/ShibuyaTrafficLight.tsx';
 
 function Navigation() {
   const location = useLocation();
@@ -126,7 +128,9 @@ function App() {
           <Route path="/projects/search-rescue-operation" element={<SearchRescueOperation />} />
           <Route path="/projects/dobot-magician" element={<DobotMagician />} />
           <Route path="/projects/alpha-mini" element={<AlphaMini />} />
+          <Route path="/projects/sensor-signal-processing" element={<SensorSignalProcessing />} />
           <Route path="/projects/wireless-zigbee" element={<WirelessZigbee />} />
+          <Route path="/projects/shibuya-traffic-light" element={<ShibuyaTrafficLight />} />
           <Route path="/" element={
             <main className="container mx-auto px-4 py-8">
               <section id="hero" className="mb-16"><HeroSection /></section>

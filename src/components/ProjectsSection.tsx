@@ -63,7 +63,7 @@ function ProjectsSection() {
             <div className="flex flex-col h-full">
               <div>
                 <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">AlphaMini Bricklaying Robot</h3>
-                <p className="text-gray-600 mt-2 group-hover:text-gray-700">Developed a voice-controlled bricklaying robot prototype with precise manipulation capabilities.</p>
+                <p className="text-gray-600 mt-2 group-hover:text-gray-700">A voice-controlled bricklaying robot prototype with precise manipulation capabilities.</p>
               </div>
               <div className="mt-auto pt-4 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300">
                 <span className="text-blue-500 font-medium">View Details →</span>
@@ -77,6 +77,32 @@ function ProjectsSection() {
               <div>
                 <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">Wireless Zigbee Communication</h3>
                 <p className="text-gray-600 mt-2 group-hover:text-gray-700">Implemented secure wireless communication between STM32 microcontrollers using Zigbee modules.</p>
+              </div>
+              <div className="mt-auto pt-4 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300">
+                <span className="text-blue-500 font-medium">View Details →</span>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="group">
+          <Link to="/projects/sensor-signal-processing" className="block p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-lg border-2 border-gray-200 hover:border-blue-300 h-full">
+            <div className="flex flex-col h-full">
+              <div>
+                <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">Sensor and Signal Processing</h3>
+                <p className="text-gray-600 mt-2 group-hover:text-gray-700">A Raspberry Pi-based system that processes sensor inputs to control an actuator in real time.</p>
+              </div>
+              <div className="mt-auto pt-4 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300">
+                <span className="text-blue-500 font-medium">View Details →</span>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="group">
+          <Link to="/projects/shibuya-traffic-light" className="block p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-lg border-2 border-gray-200 hover:border-blue-300 h-full">
+            <div className="flex flex-col h-full">
+              <div>
+                <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">Shibuya Traffic Light System</h3>
+                <p className="text-gray-600 mt-2 group-hover:text-gray-700">A microcontroller-based simulation of the Shibuya Crossing traffic light system with state-driven control.</p>
               </div>
               <div className="mt-auto pt-4 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300">
                 <span className="text-blue-500 font-medium">View Details →</span>
