@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 function ProjectsSection() {
   return (
-    <div className="rounded-xl shadow-lg p-8 border border-gray-200 bg-white">
+    <div className="rounded-xl shadow-lg p-8 border-2 border-gray-200 bg-white">
       <h2 className="text-2xl font-bold text-blue-900 mb-6">Projects</h2>
       <div className="space-y-6">
         <div className="group">
-          <Link to="/projects/self-balancing-robot" className="block p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-md border border-gray-100 hover:border-blue-200">
+          <Link to="/projects/self-balancing-robot" className="block p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-lg border-2 border-gray-200 hover:border-blue-300">
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">AI-Powered Self-Balancing Robot</h3>
@@ -20,7 +20,7 @@ function ProjectsSection() {
           </Link>
         </div>
         <div className="group">
-          <div className="p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-md border border-gray-100 hover:border-blue-200">
+          <div className="p-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-lg border-2 border-gray-200 hover:border-blue-300">
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="text-lg font-semibold text-blue-700 group-hover:text-blue-600 transition-colors duration-200">Autonomous Microcontroller Vehicle</h3>
