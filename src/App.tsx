@@ -8,19 +8,33 @@ import CoCurricularSection from './components/CoCurricularSection.tsx';
 import SkillsSection from './components/SkillsSection.tsx';
 
 function App() {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const navHeight = 64; // Height of your navbar
+      const sectionTop = section.offsetTop - navHeight;
+      
+      window.scrollTo({
+        top: sectionTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <div className="bg-gray-50 min-h-screen font-sans">
+    <div className="bg-gray-50 min-h-screen font-sans scroll-smooth">
       <nav className="bg-white shadow sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <span className="text-xl font-bold tracking-wide text-blue-900">Kyaw Linn Khant</span>
           <ul className="flex space-x-6 text-gray-700 font-medium">
-            <li><a href="#hero" className="hover:text-blue-600">Home</a></li>
-            <li><a href="#objective" className="hover:text-blue-600">Objective</a></li>
-            <li><a href="#about" className="hover:text-blue-600">About</a></li>
-            <li><a href="#education" className="hover:text-blue-600">Education</a></li>
-            <li><a href="#projects" className="hover:text-blue-600">Projects</a></li>
-            <li><a href="#co-curricular" className="hover:text-blue-600">Co-curricular</a></li>
-            <li><a href="#skills" className="hover:text-blue-600">Skills</a></li>
+            <li><a href="#hero" onClick={(e) => scrollToSection(e, 'hero')} className="hover:text-blue-600 transition-colors duration-200">Home</a></li>
+            <li><a href="#objective" onClick={(e) => scrollToSection(e, 'objective')} className="hover:text-blue-600 transition-colors duration-200">Objective</a></li>
+            <li><a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-blue-600 transition-colors duration-200">About</a></li>
+            <li><a href="#education" onClick={(e) => scrollToSection(e, 'education')} className="hover:text-blue-600 transition-colors duration-200">Education</a></li>
+            <li><a href="#projects" onClick={(e) => scrollToSection(e, 'projects')} className="hover:text-blue-600 transition-colors duration-200">Projects</a></li>
+            <li><a href="#co-curricular" onClick={(e) => scrollToSection(e, 'co-curricular')} className="hover:text-blue-600 transition-colors duration-200">Co-curricular</a></li>
+            <li><a href="#skills" onClick={(e) => scrollToSection(e, 'skills')} className="hover:text-blue-600 transition-colors duration-200">Skills</a></li>
           </ul>
         </div>
       </nav>
