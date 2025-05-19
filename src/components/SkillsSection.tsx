@@ -15,10 +15,10 @@ const skills = [
   'PyQt5', 'OpenCV', 'MATLAB', 'Multisim',
   
   // AI & Machine Learning
-  'Machine Learning', 'Reinforcement Learning', 'Computer Vision', 'Spoken Interfaces',
+  'Machine Learning', 'Reinforcement Learning', 'Computer Vision', '3D vision',
   
   // Design & Documentation
-  'CAD (Fusion360)', 'Technical Writing', 'GUI', '3D vision and Visual'
+  'CAD (Fusion360)', 'Technical Writing', 'GUI', 'Visual and Spoken Interfaces'
 ];
 
 function SkillsSection() {

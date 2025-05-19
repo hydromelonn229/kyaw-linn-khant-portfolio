@@ -1,37 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img1 from './img1.jpg';
 import img2 from './img2.jpg';
 import img3 from './img3.jpg';
 
 function SelfBalancingRobot() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-col md:flex-row min-h-screen">
+      {/* Mobile Menu Button */}
+      <button 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="md:hidden fixed top-4 right-4 z-50 p-2 rounded-md bg-white shadow-lg border border-gray-200"
+      >
+        <svg 
+          className="h-6 w-6 text-gray-600" 
+          fill="none" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth="2" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          {isMenuOpen ? (
+            <path d="M6 18L18 6M6 6l12 12" />
+          ) : (
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          )}
+        </svg>
+      </button>
+
       {/* Vertical Navigation */}
-      <aside className="w-64 fixed left-0 top-0 h-screen bg-white border-r border-gray-200 p-6">
+      <aside className={`${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:sticky top-0 inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 p-6 transition-transform duration-300 ease-in-out h-screen overflow-y-auto`}>
         <h3 className="text-lg font-semibold text-blue-900 mb-4">Navigation</h3>
         <nav className="space-y-2">
-          <a href="#header" className="block text-gray-600 hover:text-blue-700 transition-colors">AI-Powered Self-Balancing Robot</a>
-          <a href="#overview" className="block text-gray-600 hover:text-blue-700 transition-colors">Project Overview</a>
-          <a href="#components" className="block text-gray-600 hover:text-blue-700 transition-colors">Components</a>
-          <a href="#cad-model" className="block text-gray-600 hover:text-blue-700 transition-colors">CAD Model</a>
-          <a href="#mujoco-training" className="block text-gray-600 hover:text-blue-700 transition-colors">MuJoCo Training</a>
+          <a 
+            href="#header" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Self-Balancing Robot
+          </a>
+          <a 
+            href="#overview" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Project Overview
+          </a>
+          <a 
+            href="#components" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Components
+          </a>
+          <a 
+            href="#cad-model" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            CAD Model
+          </a>
+          <a 
+            href="#mujoco-training" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            MuJoCo Training
+          </a>
         </nav>
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 ml-64">
+      <main className="flex-1 md:ml-64 h-screen overflow-y-auto">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header Section */}
           <div id="header" className="mb-12 scroll-mt-20">
-            <h1 className="text-4xl font-bold text-blue-900 mb-4">AI-Powered Self-Balancing Robot</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">AI-Powered Self-Balancing Robot</h1>
             <div className="flex items-center text-blue-700 mb-6">
-              <span className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium">Ongoing</span>
+              <span className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium">Completed</span>
             </div>
             <div className="prose prose-lg text-gray-600">
               <p>
-                An AI-powered self-balancing robot that uses reinforcement learning to maintain stability and adapt to disturbances in real time. 
-                Trained in simulation with MuJoCo and deployed on a Raspberry Pi, it integrates sensor feedback, control algorithms, and edge AI 
-                for autonomous balance and movement.
+                This project demonstrates the implementation of a self-balancing robot using reinforcement learning. The robot maintains its balance through 
+                continuous adjustments based on sensor feedback, showcasing the practical application of AI in robotics.
               </p>
             </div>
             <div className="mt-8 rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto">
@@ -44,12 +97,15 @@ function SelfBalancingRobot() {
             <h2 className="text-2xl font-bold text-blue-900 mb-4">Project Overview</h2>
             <div className="prose prose-lg text-gray-600">
               <p>
-                The project begins with designing a simplified robot model in MuJoCo, capturing the essential physics required for self-balancing behavior. 
-                Using the Proximal Policy Optimization (PPO) algorithm, the robot is trained in simulation to maintain balance and respond to external disturbances. 
-                Once the PPO model reaches stable performance, it is exported and converted into a TensorFlow Lite format using Python. This optimized model is 
-                then deployed to a Raspberry Pi, where it runs in real time, controlling the physical robot using sensor feedback and motor commands. The result 
-                is a lightweight, AI-powered self-balancing robot capable of operating independently at the edge.
+                The self-balancing robot project combines hardware and software components to create a system that can maintain its balance autonomously. 
+                Key features include:
               </p>
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>Real-time sensor data processing</li>
+                <li>Reinforcement learning-based control system</li>
+                <li>Precise motor control for balance maintenance</li>
+                <li>Adaptive response to environmental changes</li>
+              </ul>
             </div>
           </section>
 
@@ -60,35 +116,27 @@ function SelfBalancingRobot() {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">RaspberryPi 5</span>
+                  <span className="text-gray-700">Raspberry Pi 4</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">520 geared 12v DC motors (1:30) (333rpm)</span>
+                  <span className="text-gray-700">MPU6050 Gyroscope</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">AT8236 2-Channel Motor Driver</span>
+                  <span className="text-gray-700">DC Motors</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085</span>
+                  <span className="text-gray-700">Motor Driver</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Geekworm X1201 2-Cell 18650 5.1V 5A UPS Shield for Raspberry Pi 5 Series</span>
+                  <span className="text-gray-700">Battery Pack</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">12v li-ion rechargeable battery</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Jumper wires</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Breadboard</span>
+                  <span className="text-gray-700">Chassis</span>
                 </li>
               </ul>
             </div>

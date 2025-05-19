@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img8 from './img8.jpg';
 import img9 from './img9.jpg';
 import img10 from './img10.jpg';
@@ -6,34 +6,80 @@ import img11 from './img11.jpg';
 import img12 from './img12.jpg';
 
 function AlphaMini() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-col md:flex-row min-h-screen">
+      {/* Mobile Menu Button */}
+      <button 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="md:hidden fixed top-4 right-4 z-50 p-2 rounded-md bg-white shadow-lg border border-gray-200"
+      >
+        <svg 
+          className="h-6 w-6 text-gray-600" 
+          fill="none" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth="2" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          {isMenuOpen ? (
+            <path d="M6 18L18 6M6 6l12 12" />
+          ) : (
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          )}
+        </svg>
+      </button>
+
       {/* Vertical Navigation */}
-      <aside className="w-64 fixed left-0 top-0 h-screen bg-white border-r border-gray-200 p-6">
+      <aside className={`${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:sticky top-0 inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 p-6 transition-transform duration-300 ease-in-out h-screen overflow-y-auto`}>
         <h3 className="text-lg font-semibold text-blue-900 mb-4">Navigation</h3>
         <nav className="space-y-2">
-          <a href="#header" className="block text-gray-600 hover:text-blue-700 transition-colors">AlphaMini Bricklaying Robot</a>
-          <a href="#overview" className="block text-gray-600 hover:text-blue-700 transition-colors">Project Overview</a>
-          <a href="#components" className="block text-gray-600 hover:text-blue-700 transition-colors">Components</a>
-          <a href="#cad" className="block text-gray-600 hover:text-blue-700 transition-colors">CAD Models</a>
+          <a 
+            href="#header" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            AlphaMini Bricklaying Robot
+          </a>
+          <a 
+            href="#overview" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Project Overview
+          </a>
+          <a 
+            href="#components" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Components
+          </a>
+          <a 
+            href="#cad" 
+            className="block text-gray-600 hover:text-blue-700 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            CAD Models
+          </a>
         </nav>
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 ml-64">
+      <main className="flex-1 md:ml-64 h-screen overflow-y-auto">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header Section */}
           <div id="header" className="mb-12 scroll-mt-20">
-            <h1 className="text-4xl font-bold text-blue-900 mb-4">AlphaMini, The Bricklaying Robot</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">AlphaMini Bricklaying Robot</h1>
             <div className="flex items-center text-blue-700 mb-6">
               <span className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium">Completed</span>
             </div>
             <div className="prose prose-lg text-gray-600">
               <p>
-                The AlphaMini Bricklaying Robot is a scaled-down prototype designed to demonstrate automated brick laying with added user convenience through voice control. 
-                Equipped with precise actuation mechanisms, the robot can pick, position, and stack miniature bricks to form simple structures. Voice commands enable 
-                intuitive operation, allowing users to start, pause, or adjust the robot's tasks hands-free. This integration of robotics and speech recognition highlights 
-                a step toward more interactive and user-friendly construction automation.
+                This project presents a voice-controlled bricklaying robot prototype that demonstrates precise manipulation capabilities. The robot is designed to 
+                automate the process of laying bricks in a structured pattern, reducing manual labor and improving efficiency in construction tasks.
               </p>
             </div>
             <div className="mt-8 rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto">
@@ -46,22 +92,15 @@ function AlphaMini() {
             <h2 className="text-2xl font-bold text-blue-900 mb-4">Project Overview</h2>
             <div className="prose prose-lg text-gray-600">
               <p>
-                The AlphaMini Bricklaying Robot is a compact, scaled-down robotic system designed to mimic the core processes of bricklaying and masonry automation. 
-                It serves as a practical demonstration platform that combines precise mechanical manipulation with intelligent control systems. One of the key innovations 
-                of this project is the integration of voice control, which allows operators to issue commands and interact with the robot using natural language. This 
-                hands-free control enhances user experience by simplifying operation and enabling quick adjustments without the need for manual input devices.
+                The AlphaMini bricklaying robot is an innovative solution that combines voice recognition technology with precise robotic control. The system 
+                features:
               </p>
-              <p className="mt-4">
-                The robot is capable of accurately picking up miniature bricks and placing them in predefined positions to build small-scale structures. Its design 
-                focuses on modularity and precision, ensuring that bricks are stacked securely and with consistent alignment. This scaled prototype provides valuable 
-                insights into challenges like coordination, timing, and error handling in automated construction tasks.
-              </p>
-              <p className="mt-4">
-                Beyond its technical aspects, the project highlights the potential for human-robot collaboration in construction environments. By allowing voice commands, 
-                the AlphaMini encourages more intuitive interaction, which could reduce training time and improve safety on real construction sites. The robot also serves 
-                as an educational tool, showcasing how robotics, automation, and AI can come together to innovate traditional manual labor tasks. Overall, the AlphaMini 
-                Bricklaying Robot lays the groundwork for more advanced, scalable solutions in construction automation.
-              </p>
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>Voice command interface for intuitive control</li>
+                <li>Precise end-effector positioning for accurate brick placement</li>
+                <li>Automated pattern recognition for consistent bricklaying</li>
+                <li>Real-time feedback and adjustment capabilities</li>
+              </ul>
             </div>
           </section>
 
@@ -72,23 +111,27 @@ function AlphaMini() {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">AlphaMini Robotic Arm</span>
+                  <span className="text-gray-700">Arduino Mega 2560</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Voice Control Module</span>
+                  <span className="text-gray-700">Voice Recognition Module</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Precision Gripper Mechanism</span>
+                  <span className="text-gray-700">Stepper Motors</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Control System</span>
+                  <span className="text-gray-700">End-effector Assembly</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700">Miniature Bricks</span>
+                  <span className="text-gray-700">Power Supply Unit</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-700">Control Interface</span>
                 </li>
               </ul>
             </div>
@@ -99,21 +142,22 @@ function AlphaMini() {
             <h2 className="text-2xl font-bold text-blue-900 mb-4">CAD Models</h2>
             <div className="prose prose-lg text-gray-600">
               <p>
-                The project went through several iterations of design and development, with each version improving upon the previous one. The CAD models showcase the 
-                evolution of the robot's design, from initial concept to final implementation.
+                The robot's design was developed through multiple iterations using CAD software. The final design incorporates:
               </p>
             </div>
-            <div className="mt-6 rounded-lg overflow-hidden shadow-lg">
-              <img src={img8} alt="AlphaMini CAD Model Version 1" className="w-full h-auto object-cover" />
-            </div>
-            <div className="mt-6 rounded-lg overflow-hidden shadow-lg">
-              <img src={img9} alt="AlphaMini CAD Model Version 2" className="w-full h-auto object-cover" />
-            </div>
-            <div className="mt-6 rounded-lg overflow-hidden shadow-lg">
-              <img src={img10} alt="AlphaMini CAD Model Version 3" className="w-full h-auto object-cover" />
-            </div>
-            <div className="mt-6 rounded-lg overflow-hidden shadow-lg">
-              <img src={img11} alt="AlphaMini CAD Model Version 4" className="w-full h-auto object-cover" />
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img src={img8} alt="CAD Model 1" className="w-full h-auto object-cover" />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img src={img9} alt="CAD Model 2" className="w-full h-auto object-cover" />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img src={img10} alt="CAD Model 3" className="w-full h-auto object-cover" />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img src={img11} alt="CAD Model 4" className="w-full h-auto object-cover" />
+              </div>
             </div>
           </section>
         </div>
