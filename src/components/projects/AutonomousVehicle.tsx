@@ -160,21 +160,6 @@ function AutonomousVehicle() {
             </div>
           </section>
 
-          {/* Implementation */}
-          <section id="implementation" className="mb-12 scroll-mt-20">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Implementation</h2>
-            <div className="prose prose-lg text-gray-600">
-              <p>
-                The implementation process involved several key steps:
-              </p>
-              <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Hardware assembly and sensor calibration</li>
-                <li>Development of control algorithms</li>
-                <li>Integration of navigation systems</li>
-                <li>Testing and optimization</li>
-              </ul>
-            </div>
-          </section>
         </div>
       </main>
     </div>

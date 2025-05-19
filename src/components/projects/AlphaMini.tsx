@@ -51,13 +51,6 @@ function AlphaMini() {
             Project Overview
           </a>
           <a 
-            href="#components" 
-            className="block text-gray-600 hover:text-blue-700 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Components
-          </a>
-          <a 
             href="#cad" 
             className="block text-gray-600 hover:text-blue-700 transition-colors"
             onClick={() => setIsMenuOpen(false)}
